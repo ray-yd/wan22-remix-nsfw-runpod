@@ -1,0 +1,14 @@
+{
+  "title": "Wan2.2 Remix NSFW I2V",
+  "description": "Wan2.2 Image-to-Video with FX-FeiHou Remix NSFW LoRA (FP8). Generates stylized videos from images.",
+  "type": "serverless",
+  "category": "video",
+  "iconUrl": "https://huggingface.co/FX-FeiHou/wan2.2-Remix/resolve/main/banner.jpg",
+  "config": {
+    "runsOn": "GPU",
+    "containerDiskInGb": 120,
+    "gpuCount": 1,
+    "gpuIds": "ADA_24,ADA_32_PRO,AMPERE_80",
+    "allowedCudaVersions": ["12.4", "12.8"]
+  }
+}
