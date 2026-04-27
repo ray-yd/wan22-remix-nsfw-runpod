@@ -31,3 +31,5 @@ Wan2.2 Image-to-Video with FX-FeiHou Remix NSFW LoRA on RunPod Serverless.
   }
 }
 ```
+
+[![Runpod](https://api.runpod.io/badge/ray-yd/wan22-remix-nsfw-runpod)](https://console.runpod.io/hub/ray-yd/wan22-remix-nsfw-runpod)

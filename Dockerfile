@@ -45,12 +45,11 @@ RUN wget -q https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/resolve/main/
 
 # 下載 FX-FeiHou Remix NSFW LoRA（需要 HF Token）
 ARG HF_TOKEN
-RUN HF_HUB_ENABLE_HF_TRANSFER=1 huggingface-cli download \
-    FX-FeiHou/wan2.2-Remix \
-    NSFW/Wan2.2_Remix_NSFW_i2v_14b_low_lighting_fp8_e4m3fn_v3.0.safetensors \
-    --local-dir /ComfyUI/models/loras \
-    --local-dir-use-symlinks False \
-    --token ${HF_TOKEN}
+RUN mkdir -p /ComfyUI/models/loras/NSFW && \
+    wget -q \
+    --header="Authorization: Bearer ${HF_TOKEN}" \
+    "https://huggingface.co/FX-FeiHou/wan2.2-Remix/resolve/main/NSFW/Wan2.2_Remix_NSFW_i2v_14b_low_lighting_fp8_e4m3fn_v3.0.safetensors" \
+    -O "/ComfyUI/models/loras/NSFW/Wan2.2_Remix_NSFW_i2v_14b_low_lighting_fp8_e4m3fn_v3.0.safetensors"
 
 # 下載輔助模型（CLIP Vision、Text Encoder、VAE）
 RUN wget -q https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors \
