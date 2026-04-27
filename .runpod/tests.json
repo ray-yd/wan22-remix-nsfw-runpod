@@ -1,0 +1,20 @@
+{
+  "tests": [
+    {
+      "name": "basic_i2v_test",
+      "input": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/280px-PNG_transparency_demonstration_1.png",
+        "prompt": "cinematic video, smooth motion, high quality",
+        "negative_prompt": "blurry, low quality, static",
+        "width": 480,
+        "height": 832,
+        "length": 81,
+        "steps": 10,
+        "seed": 42,
+        "cfg": 2.0
+      },
+      "timeout": 600
+    }
+  ],
+  "config": {}
+}
